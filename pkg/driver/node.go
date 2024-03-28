@@ -60,7 +60,9 @@ func (d *driver) NodeStageVolume(_ context.Context, req *csi.NodeStageVolumeRequ
 	}
 	klog.InfoS("Check if volume is already mounted")
 	if !notMnt {
-		return nil, status.Errorf(codes.Internal, "Volume %s is already mounted under path %s", req.GetVolumeId(), targetPath)
+		// osc specific: fix volume is already mounted
+		klog.InfoS("Staged volume is already mounted", "Volume", req.GetVolumeId())
+		return &csi.NodeStageVolumeResponse{}, nil
 	}
 	klog.InfoS("Create target directory")
 	if err := d.os.MkdirAll(targetPath, 0750); err != nil {
