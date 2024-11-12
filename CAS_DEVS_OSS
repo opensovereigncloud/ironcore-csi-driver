@@ -1,0 +1,13 @@
+team: iaas
+assignees:
+  - "rohit.kumar"
+  - "sujeet.phadtare"
+cveLabels:
+  - "type::3-cve"
+  - "stream::onMetal"
+  - "Component: API"
+  - "why::Security"
+  - "squad::API"
+dueDays: 13
+cve:
+  - repository: osc/upstream/ironcore-dev/ironcore-csi-driver
