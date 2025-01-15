@@ -1,7 +1,7 @@
 # Image URL to use all building/pushing image targets
 IMG ?= ironcore-csi-driver:latest
 # ENVTEST_K8S_VERSION refers to the version of kubebuilder assets to be downloaded by envtest binary.
-ENVTEST_K8S_VERSION = 1.30.3
+ENVTEST_K8S_VERSION = 1.31.0
 
 # Setting SHELL to bash allows bash commands to be executed by recipes.
 # This is a requirement for 'setup-envtest.sh' in the test target.
@@ -115,7 +115,7 @@ KUSTOMIZE_VERSION ?= v5.5.0
 ADDLICENSE_VERSION ?= v1.1.1
 MOCKGEN_VERSION ?= v0.5.0
 GOIMPORTS_VERSION ?= v0.26.0
-GOLANGCI_LINT_VERSION ?= v1.61.0
+GOLANGCI_LINT_VERSION ?= v1.62.0
 
 KUSTOMIZE_INSTALL_SCRIPT ?= "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
 .PHONY: kustomize
